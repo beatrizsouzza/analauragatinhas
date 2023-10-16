@@ -1,3 +1,4 @@
+
 const form = document.querySelector("form")
 const resp = document.querySelector("h3")
 
@@ -8,18 +9,15 @@ form = addEventListener("submit", (e) => {
 
     const permitida = Number(form.inPermitida.value)
     const condutor = Number(form.inCondutor.value)
-    alert(permitida + condutor)
-    
     let leve = permitida + (permitida * 0.2)
-    
 
     if(condutor <= permitida){
     resp.innerText = `Situação: Sem Multa`
    
 } else if(condutor <= leve) {
-    resp.InnerText = `Situação: Multa Leve`
+    resp.innerText = `Situação: Multa Leve`
     
-} else {preventDefault
+} else {
     resp.innerText = `Situação: Multa grave`
 }
 })
