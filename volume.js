@@ -20,7 +20,13 @@ form = addEventListener("submit", (e) => {
     }
 
 resp.innerTetx = 'Lados podem formar um triângulo'
+
 if(ladoA == ladoB && ladoA == ladoC){
     resp1.innerTetx = 'Tipo: Equilátero'
-    
+} else if ((ladoA == ladoB) || (ladoA == ladoC) || (ladoB == ladoC)){
+    resp1.innerText = 'Tipo: Isóceles'
+} else {
+    resp1.innerText = 'Tipo: Escaleno'
 }
+  
+})
